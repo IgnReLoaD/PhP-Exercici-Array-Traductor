@@ -14,40 +14,22 @@
         </header>
         <main>
             <section>
-                <label id="mostrar">text de prova</label>
+                <label id="mostrar">Mostra una frase en aquests 4 idiomes, predefinida i emmagatzemada en un Array associatiu.</label>
             </section>
             <hr>
-            <section>
-                <button id="es" onClick=toSpanish()>ESPAÑOL</button>
-                <button id="en" onClick=toEnglish()>ENGLISH</button>
-                <button id="fr" onClick=toFrançais()>FRANÇAIS</button>
-                <button id="ca" onClick=toCatalan()>CATALÀ</button>
-            </section>
-    
-            <?php
+            <form method="post" action="traductor.php">
+                <input type="submit" name="TraductorES" value="" style="background-image: url(./assets/es.png); width:65px; height:65px; border:none;">
+                <input type="submit" name="TraductorEN" value="" style="background-image: url(./assets/en.png); width:65px; height:65px; border:none;">
+                <input type="submit" name="TraductorFR" value="" style="background-image: url(./assets/fr.png); width:65px; height:65px; border:none;">
+                <input type="submit" name="TraductorDE" value="" style="background-image: url(./assets/de.png); width:65px; height:65px; border:none;">
+            </form>
 
-                // declaració de variables:
-                // $diccionario = [''];
-                // $diccionario[0] = ('es'=>'frase en español');
-                // $diccionario[1] = ('en'=>'sentence in english');
-                // $diccionario[2] = ('fr'=>'expression en français');
-                // $diccionario[3] = ('ca'=>'frase en català');
-                $diccionario = array('es'=>'frase en español','en'=>'sentence in english','fr'=>'expression en français','ca'=>'frase en català');
-                // $mySentence = getElementById('mostrar').value;
-
-                function toSpanish () {
-                    return echo($diccionario['es']);
-                }
-                function toEnglish () {
-                    return alert($diccionario['en']);
-                }
-                function toFrançais () {
-                    return alert($diccionario['fr']);
-                }
-                function toCatalan () {
-                    return alert($diccionario['ca']);
-                }
-            ?>
+            <!-- <section>
+                <button id="es" onClick=<?php echo(toSpanish()) ?> >ESPAÑOL</button>
+                <button id="en" onClick=<?php echo(toEnglish()) ?>>ENGLISH</button>
+                <button id="fr" onClick=<?php echo(toFrançais()) ?>>FRANÇAIS</button>
+                <button id="ca" onClick=<?php echo(toCatalan()) ?>>CATALÀ</button>
+            </section> -->            
 
         </main>
     </body>
